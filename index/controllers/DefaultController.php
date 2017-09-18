@@ -12,7 +12,7 @@ class DefaultController extends Controller
     public $layout = false;
     public function actionIndex()
     {
-    	echo 1233;die;
+    	echo 12334343;die;
         return $this->render('index');
     }
 }
