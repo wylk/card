@@ -6,5 +6,7 @@ defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 require(dirname(dirname(dirname(__DIR__))). '/vendor/autoload.php');
 require(dirname(dirname(dirname(__DIR__))).'/vendor/yiisoft/yii2/Yii.php');
+require(dirname(dirname(dirname(__DIR__))). '/config/function.php');
+require(dirname(dirname(dirname(__DIR__))). '/config/config.php');
 $config = require(dirname(dirname(dirname(__DIR__))). '/config/main-local.php');
 (new yii\web\Application($config))->run();

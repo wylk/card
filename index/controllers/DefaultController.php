@@ -3,16 +3,21 @@
 namespace app\addons\card\index\controllers;
 
 use yii\web\Controller;
+use app\addons\card\common\CommonController;
 
 /**
  * Default controller for the `index` module
  */
-class DefaultController extends Controller
+class DefaultController extends CommonController
 {
-    public $layout = false;
+    
     public function actionIndex()
     {
-    	echo 12334343;die;
+    	$this->test();
+    	die;
+    	dump(['oere'=>3444]);
+    	die;
         return $this->render('index');
     }
+
 }
