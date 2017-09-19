@@ -21,9 +21,9 @@ $(function () {
 		var c=$("#totalcountshow").html(nm*1+1);
 		var gid=$(this).data('id');
 		// alert(gid);
-    var shop_id=$(this).attr('sid');
-    alert(shop_id);
-    return false;
+    // var shop_id=$(this).attr('sid');
+    // // alert(shop_id);
+    // return false;
     // alert(shop_id);
     console.log(shop_id);
     // return false;
@@ -31,8 +31,8 @@ $(function () {
 		var postData={goods_id:gid};
 		postData.goods_price=danjia;
 		postData.num=num;
-    postData.shop_id=shop_id;
-    // postData.csrf=csrf;
+    // postData.shop_id=shop_id;
+    // // postData.csrf=csrf;
 		console.log(postData);
 		// return false;
 		$.get("?r=plugin/users/defualt/cart",postData,function(re){
@@ -73,7 +73,7 @@ $(function () {
 		var postData={goods_id:gid};
 		postData.goods_price=danjia;
 		postData.num=num;
-    postData.shop_id=shop_id;
+    // postData.shop_id=shop_id;
 		console.log(postData);
 		$.get('?r=plugin/users/defualt/cart',postData,function(re){
 			if(re.error==0)
@@ -228,7 +228,7 @@ $(document).ready(function(){
         var postData={goods_id:goods_id};
         postData.goods_price=goods_price;
         postData.num=num;
-        postData.csrf=csrf;
+        postData._csrf=csrf;
         console.log(postData);
           // return false;
         $.get('?r=plugin/users/default/cart',postData,function(re){
@@ -262,7 +262,7 @@ $(document).ready(function(){
         var postData={goods_id:goods_id};
         postData.goods_price=goods_price;
         postData.num=num;
-        postData.csrf=csrf;
+        postData._csrf=csrf;
         console.log(postData);
         // return false;
         $.get('?r=plugin/users/default/cart',postData,function(re){
@@ -303,7 +303,7 @@ $(document).ready(function(){
                 data.cat_id = ids;
                 data.total=AllTotal;
                 data.goods_num=allnum;
-                data.csrf=csrf;
+                data._csrf=csrf;
                 console.log(data);
                 // return false;
             $.get('?r=plugin/users/default/add_order_goods',data,function(re){
