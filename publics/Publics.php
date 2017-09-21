@@ -1,16 +1,16 @@
 <?php
 
-namespace app\addons\card\index;
+namespace app\addons\card\publics;
 
 /**
- * index module definition class
+ * Publics module definition class
  */
-class Index extends \yii\base\Module
+class Publics extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'app\addons\card\index\controllers';
+    public $controllerNamespace = 'app\addons\card\publics\controllers';
 
     /**
      * @inheritdoc
