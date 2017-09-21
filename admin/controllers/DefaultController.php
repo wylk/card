@@ -44,4 +44,15 @@ class DefaultController extends CommonController
             return $this->render('login', ['model' => $model]);         
         }
     }
+
+    public function actionDel()
+    {
+        if(Yii::$app->cache->flush()){
+            $this->dexit(['error'=>0,'msg'=>'清除缓存成功']);
+        }else{
+            $this->dexit(['error'=>0,'msg'=>'清除缓存失败']);
+
+        }
+
+    }
 }
