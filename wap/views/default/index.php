@@ -43,7 +43,7 @@
             <ul class="mui-table-view">
                 <li class="mui-table-view-cell" data-url="<?php echo \yii\helpers\Url::to(['default/add_card'])?>"><i class="fa fa-plus" id="fa"></i>发卡</li>
                 <li class="mui-table-view-cell"><i class="fa fa-credit-card" id="fa"></i>发布的卡</li>
-                <li class="mui-table-view-cell"><i class="fa fa-plus" id="fa"></i>发券</li>
+                <li class="mui-table-view-cell" data-url='<?php echo \yii\helpers\Url::to(['default/add_voucher'])?>'><i class="fa fa-plus" id="fa"></i>发券</li>
                 <li class="mui-table-view-cell"><i class="fa fa-credit-card" id="fa"></i>发布的券</li>
                 <li class="mui-table-view-cell"><i class="fa fa-money" id="fa"></i>核销</li>
                 <li class="mui-table-view-cell"><i class="fa fa-plug" id="fa"></i>API</li>
