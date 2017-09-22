@@ -7,7 +7,7 @@ class CommonController extends Controller
 	public function init()
 	{
 		parent::init();
-		header("Content-type: text/html; charset=utf-8");
+		header("Content-type:text/html; charset=utf-8");
 	}
 	public function test()
 	{

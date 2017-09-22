@@ -1,3 +1,7 @@
+<?
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+?>
 <!doctype html>
 <html>
 
@@ -29,20 +33,30 @@
         </div>
 
         <div class="login-font">
-            <i>Sign In </i> or  <a href="<?php echo yii\helpers\Url::to(['default/register'])?>"><span> Sign Up</span></a>s
+            <i>Sign In </i> or  <a href="<?php echo yii\helpers\Url::to(['default/register'])?>"><span> Sign Up</span></a>
         </div>
         <div class="am-u-sm-10 login-am-center">
-            <form class="am-form">
-                <fieldset>
-                    <div class="am-form-group">
-                        <input type="text" name="username" class="" id="doc-ipt-email-1" placeholder="输入用户名">
-                    </div>
-                    <div class="am-form-group">
-                        <input type="password" name="password" class="" id="doc-ipt-pwd-1" placeholder="输入密码">
-                    </div>
-                    <p><button type="submit" class="am-btn am-btn-default">登录</button></p>
-                </fieldset>
-            </form>
+            <!-- <form class="am-form"> -->
+              <?php
+                $form = ActiveForm::begin([
+                  'fieldConfig'=>[
+                      'template'=>'<div class="am-form-group">{label}{input}</div>{error}',
+
+                      ],
+                      'options'=>[
+                      'class'=>'am-form'
+
+                      ],
+
+                  ]);
+                echo $form->field($model,'username')->textInput(['placeholder'=>'输入用户名'])->label('用户名');
+                echo $form->field($model,'password')->passwordInput(['placeholder'=>'输入密码'])->label('密码');
+                echo $form->field($model,'rememberMe')->checkbox(['template'=>'{input}<label>记住我</label>'])
+              ?>
+                <p>
+                  <?php echo Html::submitButton('登录',['class'=>'am-btn am-btn-default'])?>
+                </p>
+            <?php ActiveForm::end();?>
         </div>
     </div>
 </div>

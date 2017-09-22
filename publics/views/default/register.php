@@ -1,3 +1,7 @@
+<?php
+  use yii\helpers\Html;
+  use yii\bootstrap\ActiveForm;
+?>
 <!doctype html>
 <html>
 
@@ -18,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
-<body data-type="login">
+<body data-type="login" style="height:auto;">
 
   <div class="am-g myapp-login">
     <div class="myapp-login-logo-block  tpl-login-max">
@@ -32,29 +36,31 @@
            <i>Sign Up </i> or  <a href="<?php echo yii\helpers\Url::to(['default/login'])?>"><span> Sign In</span></a>
         </div>
         <div class="am-u-sm-10 login-am-center">
-            <form class="am-form">
-                <fieldset>
-                     <div class="am-form-group">
-                        <input type="text" name="username" class="" id="doc-ipt-email-1" placeholder="输入用户名">
-                    </div>
-                    <div class="am-form-group">
-                        <input type="password" name="password" class="" id="doc-ipt-pwd-1" placeholder="设置个密码吧">
-                      </div>
-                     <div class="am-form-group">
-                        <input type="password" name="repass" class="" id="doc-ipt-pwd-1" placeholder="输入确认密码">
-                      </div>
-                     <div class="am-form-group">
-                        <input type="email" class="" name="email" id="doc-ipt-email-1" placeholder="输入电子邮件">
-                    </div>
-                    <div class="am-form-group">
-                        <input type="text"  name="phone" class="" id="doc-ipt-email-1" placeholder="输入手机号码">
-                    </div>
-                    <div class="am-form-group">
-                        <input type="text" name="code" class="" id="doc-ipt-email-1" placeholder="输入验证码">
-                    </div>
-                    <p><button type="submit" class="am-btn am-btn-default">注册</button></p>
-                </fieldset>
-            </form>
+            <?php
+              $form = ActiveForm::begin([
+                'fieldConfig'=>[
+                  'template'=>'<div class="am-form-group">{label}{input}</div>{error}',
+
+
+
+                ],
+
+                'options'=>[
+                    'class'=>'am-form'
+                  ],
+
+                ]);
+              echo $form->field($model,'username')->textInput(['placeholder'=>'输入用户名'])->label('用户名');
+              echo $form->field($model,'password')->passwordInput(['placeholder'=>'设置个密码吧'])->label('密码');
+              echo $form->field($model,'repass')->passwordInput(['placeholder'=>'输入确认密码'])->label('确认密码');
+              echo $form->field($model,'email')->textInput(['placeholder'=>'输入电子邮件'])->label('电子邮件');
+              echo $form->field($model,'phone')->textInput(['placeholder'=>'输入手机号码'])->label('手机');
+
+            ?>
+                    <p>
+                      <?php echo Html::submitButton('注册',['class'=>'am-btn am-btn-default'])?></p>
+                <?php ActiveForm::end();?>
+            <!-- </form> -->
         </div>
     </div>
 </div>

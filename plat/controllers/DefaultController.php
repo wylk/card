@@ -1,13 +1,12 @@
 <?php
-
 namespace app\addons\card\plat\controllers;
-use app\addons\card\common\CommonController;
+use app\addons\card\plat\controllers\PlatController;
 use yii\web\Controller;
-
+use Yii;
 /**
  * Default controller for the `plat` module
  */
-class DefaultController extends CommonController
+class DefaultController extends PlatController
 {
     /**
      * Renders the index view for the module
@@ -52,5 +51,17 @@ class DefaultController extends CommonController
     {
         //领卡记录
         return $this->render('received_record');
+    }
+    public function actionLogout()
+    {
+        //退出登录
+        $session = Yii::$app->session;
+        unset($session['user']);
+        $this->redirect('index.php?r=publics/default/login');
+    }
+    public function actionTest()
+    {
+        $session = Yii::$app->session;
+        echo $session['user']['uid'];
     }
 }

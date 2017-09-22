@@ -40,14 +40,7 @@
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">卡片名称</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-name" placeholder="输入卡片名称">
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">有效期限</label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" data-am-datepicker=""  placeholder="输入有效期限">
+                                        <input type="text" name="card_name" placeholder="输入卡片名称">
                                     </div>
                                 </div>
                             <div class="am-form-group">
