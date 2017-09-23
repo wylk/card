@@ -201,23 +201,28 @@
                      <li class="tpl-left-nav-item">
                         <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-wpforms"></i>
-                            <span>我的账户</span>
+                            <span>账户中心</span>
                             <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
                         </a>
                         <ul class="tpl-left-nav-sub-menu" style="display: block;">
                             <li>
-                                <a href="table-font-list.html">
+                             <a href="<?php echo yii\helpers\Url::to(['myself/myaccount'])?>">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>我的账户</span>
+                                    <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+                                <a href="<?php echo yii\helpers\Url::to(['myself/myprofile'])?>">
                                     <i class="am-icon-angle-right"></i>
                                     <span>我的资料</span>
                                     <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
                                 </a>
 
-                                <a href="table-images-list.html">
+                                <a href="<?php echo yii\helpers\Url::to(['myself/identity'])?>">
                                     <i class="am-icon-angle-right"></i>
                                     <span>身份认证</span>
                                     <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 
-                                    <a href="form-news.html">
+                                    <a href="<?php echo yii\helpers\Url::to(['myself/receivable'])?>">
                                         <i class="am-icon-angle-right"></i>
                                         <span>收款账户</span>
                                         <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -269,21 +274,21 @@
 
 
                     <li class="tpl-left-nav-item">
-                        <a href="login.html" class="nav-link tpl-left-nav-link-list">
+                        <a href="<?php echo yii\helpers\Url::to(['myself/listbill'])?>" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-building-o"></i>
                             <span>账单明细</span>
 
                         </a>
                     </li>
                      <li class="tpl-left-nav-item">
-                        <a href="login.html" class="nav-link tpl-left-nav-link-list">
+                        <a href="<?php echo yii\helpers\Url::to(['myself/notify'])?>" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-bell"></i>
                             <span>消息中心</span>
 
                         </a>
                     </li>
                      <li class="tpl-left-nav-item">
-                        <a href="login.html" class="nav-link tpl-left-nav-link-list">
+                        <a href="<?php echo yii\helpers\Url::to(['myself/employee'])?>" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-group"></i>
                             <span>店员管理</span>
 

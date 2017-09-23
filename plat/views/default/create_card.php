@@ -36,49 +36,70 @@
 
 
                         <div class="am-u-sm-12 am-u-md-9">
-                            <form class="am-form am-form-horizontal">
+                         <!--    <form class="am-form am-form-horizontal"> -->
+                          <div class="am-form am-form-horizontal">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">卡片名称</label>
                                     <div class="am-u-sm-9">
                                         <input type="text" name="card_name" placeholder="输入卡片名称">
                                     </div>
                                 </div>
-                            <div class="am-form-group">
+                                <div class="am-form-group">
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">有效期限</label>
+                                    <div class="am-u-sm-9">
+                                      <div class="am-btn-group doc-js-btn-1" data-am-button>
+                                        <label class="am-btn am-btn-primary" id="limit1">
+                                          <input type="radio" name="valid_period_type" value="0" id="option1"   checked> 长期有效
+                                        </label>
+                                        <label class="am-btn am-btn-primary" id="limit">
+                                          <input type="radio" name="valid_period_type" value="1" > 限定期限
+                                        </label>
+                                      </div>
+                                       <div class="am-g"  id="a1">
+                                      <div class="am-u-sm-6">
+                                        设置开始日期<br/>
+                                        <p><input type="text" class="am-form-field" data-am-datepicker placeholder="今天之前的日期被禁用" id="my-start-2" name="limit_time_start"/></p>
+                                      </div>
+                                      <div class="am-u-sm-6">
+                                        结束日期<br/>
+                                        <p><input type="text" class="am-form-field" data-am-datepicker id="my-end-2" name="limit_time_end"/></p>
+                                      </div>
+                                    </div>
+
+
+                                    </div>
+
+
+                                    </div>
+
+                           <!--  <div class="am-form-group">
                              <label for="user-email" class="am-u-sm-3 am-form-label">有效期限</label>
                             <div class="am-u-sm-9">
                             <div data-am-widget="tabs" class="am-tabs am-tabs-default">
                                 <ul class="am-tabs-nav am-cf">
                                   <li class="am-active"><a href="[data-tab-panel-0]">长期有效</a></li>
                                   <li class=""><a href="[data-tab-panel-1]">限定期限</a></li>
-                                  <li class=""><a href="[data-tab-panel-2]">开卡期限</a></li>
                               </ul>
                               <div class="am-tabs-bd">
                                   <div data-tab-panel-0 class="am-tab-panel am-active">
+                                  <p><input type="hidden" name="valid_period_type" value="0"/></p>
                                   </div>
                                   <div data-tab-panel-1 class="am-tab-panel ">
                                     <div class="am-g">
                                       <div class="am-u-sm-6">
                                         设置开始日期<br/>
-                                        <p><input type="text" class="am-form-field" data-am-datepicker placeholder="今天之前的日期被禁用" id="my-start-2"/></p>
+                                        <p><input type="text" class="am-form-field" data-am-datepicker placeholder="今天之前的日期被禁用" id="my-start-2" name="limit_time_start"/></p>
                                       </div>
                                       <div class="am-u-sm-6">
                                         结束日期<br/>
-                                        <p><input type="text" class="am-form-field" data-am-datepicker id="my-end-2" /></p>
+                                        <p><input type="text" class="am-form-field" data-am-datepicker id="my-end-2" name="limit_time_end"/></p>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div data-tab-panel-2 class="am-tab-panel ">
-                                    <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">有效月数</label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" placeholder="输入卡片有效月数，比如一年输入12月">
-                                    </div>
-                                </div>
                                   </div>
                               </div>
                           </div>
                           </div>
-                          </div>
+                          </div> -->
 
 
                                 <div class="am-form-group" id="address2">
@@ -91,45 +112,42 @@
                                 <div class="am-form-group">
                                     <label for="user-QQ" class="am-u-sm-3 am-form-label">发卡数量</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-QQ" placeholder="输入发卡数量">
+                                        <input type="text" name="card_num" placeholder="输入发卡数量">
                                     </div>
                                 </div>
-
-                                <div class="am-form-group">
+                                 <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">领卡方式</label>
                                     <div class="am-u-sm-9">
-                                    <div data-am-widget="tabs" class="am-tabs am-tabs-default">
-                                    <ul class="am-tabs-nav am-cf">
-                                      <li class="am-active"><a href="[data-tab-panel-0]">免费领取</a></li>
-                                      <li class=""><a href="[data-tab-panel-1]">购买领取</a></li>
-                                  </ul>
-                                       <div class="am-tabs-bd">
-                                  <div data-tab-panel-0 class="am-tab-panel am-active">
-                                  </div>
-                                  <div data-tab-panel-1 class="am-tab-panel ">
-                                    <div class="am-g">
-                                     <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-3 am-form-label">购买金额</label>
-                                        <div class="am-u-sm-9">
-                                            <input type="text" id="user-email" placeholder="输入购买金额">
-                                        </div>
-                                    </div>
-                                    </div>
-                                  </div>
-                              </div>
+                                      <div class="am-btn-group doc-js-btn-1" data-am-button>
+                                        <label class="am-btn am-btn-primary" id="limit3">
+                                          <input type="radio" name="receive_way" value="0" id="option1"   checked> 免费领取
+                                        </label>
+                                        <label class="am-btn am-btn-primary" id="limit4">
+                                          <input type="radio" name="receive_way" value="1" > 购买领取
+                                        </label>
+                                      </div>
 
 
+                                    </div>
+
+
+                                    </div>
+                                     <div class="am-form-group" style="display:none" id="a2">
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">购买金额</label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" name="buycard_price" id="user-weibo" placeholder="输入购买金额">
                                     </div>
                                 </div>
+
                                  <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">领卡申请</label>
                                     <div class="am-u-sm-9">
                                       <div class="am-btn-group doc-js-btn-1" data-am-button>
                                         <label class="am-btn am-btn-primary">
-                                          <input type="radio" name="options1" value="0" id="option1"  checked> 不需要
+                                          <input type="radio" name="card_apply" value="0" id="option1"  checked> 不需要
                                         </label>
                                         <label class="am-btn am-btn-primary">
-                                          <input type="radio" name="options" value="1" id="option2"> 需要
+                                          <input type="radio" name="card_apply" value="1" id="option2"> 需要
                                         </label>
                                       </div>
 
@@ -142,13 +160,13 @@
                                  <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">领卡信息</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-weibo" placeholder="输入领卡信息">
+                                        <input type="text" name="apply_content" id="user-weibo" placeholder="输入领卡信息">
                                     </div>
                                 </div>
                                  <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">领卡限制</label>
+                                    <label for="user-weibo"  class="am-u-sm-3 am-form-label">领卡限制</label>
                                     <div class="am-u-sm-9">
-                                     <select data-am-selected="{searchBox: 1}">
+                                     <select data-am-selected="{searchBox: 1}" name="receive_times">
                                       <option value="1">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
@@ -167,7 +185,7 @@
                                  <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">使用次数</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-weibo" placeholder="输入用卡限制次数，默认为空表示不限制次数">
+                                        <input type="text" name="use_times" id="user-weibo" placeholder="输入用卡限制次数，默认为空表示不限制次数">
                                     </div>
                                 </div>
 
@@ -176,11 +194,12 @@
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
-                                                <img src="assets/img/a5.png" alt="">
+                                                <img src="assets/img/a5.png" id="images" alt="" style="width:300px;height:175px;">
                                             </div>
+                                          <a href="javascript:;" onclick="getElementById('inputfile').click()">
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                        <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
-                                            <input id="doc-form-file" type="file" multiple>
+                                       <i class="am-icon-cloud-upload"></i> 添加封面图片</button></a>
+                                            <input id="inputfile"  type="file" name="image" multiple >
                                         </div>
                                     </div>
                                 </div>
@@ -197,10 +216,10 @@
                                     <div class="am-u-sm-9">
                                        <div class="am-btn-group doc-js-btn-1" data-am-button>
                                         <label class="am-btn am-btn-primary">
-                                          <input type="radio" name="options" value="0" id="option1"  checked> 不允许
+                                          <input type="radio" name="promotion" value="0" id="option1"  checked> 不允许
                                         </label>
                                         <label class="am-btn am-btn-primary">
-                                          <input type="radio" name="options" value="1" id="option2"> 允许
+                                          <input type="radio" name="promotion" value="1" id="option2"> 允许
                                         </label>
                                       </div>
                                       </div>
@@ -210,28 +229,64 @@
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary">保存草稿</button>
+                                        <button type="submit" class="am-btn am-btn-primary" id="signin">保存草稿</button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-
-
-
-
-
-
-
-
-
         </div>
 
     </div>
+    <script>
+      $(function(){
+         $('#a1').css('display','none');
+        $('#limit').click(function(){
+          $("#a1").css('display','block');
+        });
+        $('#limit1').click(function(){
+          $('#a1').css('display','none');
+        });
+        $('#limit4').click(function(){
+          $("#a2").css('display','block');
+        });
+        $('#limit3').click(function(){
+          $('#a2').css('display','none');
+        });
+         $("#inputfile").change(function(){
+            //创建FormData对象
+            var data = new FormData();
+            //为FormData对象添加数据
+            //
+            $.each($('#inputfile')[0].files, function(i, file) {
+                data.append('upload_file', file);
+            });
+            //console.log(data);
+             $.ajax({
+                url:'?r=plat/default/upload',
+                type:'POST',
+                data:data,
+                cache: false,
+                contentType: false,    //不可缺
+                processData: false,    //不可缺
+                success:function(re){
+                    console.log(re);
+                    //$("#imgId")[0].src;
+                    $('#images').attr('src',re);
+                    $('#inputfile').attr('value',re);
+                }
+            });
+        });
+
+        $('#signin').click(function(){
+           console.log($('#myEditor').html());
+        });
+      });
+    </script>
     <script>
         var um = UM.getEditor('myEditor');
     </script>
@@ -325,24 +380,10 @@
                     district: "其他区",
                     scrollToCenter: true,
                     footer: true,
+
                     selectEnd: function(json) {
                         console.log(JSON.stringify(json));
                     }
-                });
-
-                //  配置级联层数
-                $("#address3").address({
-                    prov: "广东省",
-                    city: "中山市",
-                    scrollToCenter: true,
-                    selectNumber: 2,
-                });
-
-                //  配置级联层数
-                $("#address4").address({
-                    prov: "海南省",
-                    scrollToCenter: true,
-                    selectNumber: 1,
                 });
 
             });
